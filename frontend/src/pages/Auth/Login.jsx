@@ -103,6 +103,11 @@ const Login = () => {
             </p>
           </div>
         </div>
+        <img
+          src="https://lh3.googleusercontent.com/pw/AP1GczPmmYZWMJAmJGp3aruA3YApYZus4MwaarHJmaqylU2b_c9OxJwxGT9PQlZcuv0n-Q7XHGZYDoqNViMMVPzoHWbQXutYKaZQDoFCu8LLwBIXihsq4im_YN4faFNKTIUpwgWKTzxY6qo6qnYXkXNY2oBPmPCKUnM48VunDMzTDV4SYv97mrxgVRKzlAGg7NTZnnNaB4_ouUjXbrhoebWc_BeSoFSuUbwwFhR8dXrEbxOduZadNefveWjy9GpyrxW_Jkxb5AhAhs-A3GYdrfDTBCbNHTgsi6_x9Na7tVzNN9phv0mbjLT_uRxxxRNQ0k36pGbRv0O4o2ChplNHQ6K5D8i_VIcpnpFtog8MBFK4735xwcJe_YHfolR_UF4PTulBQThfBV0eGsFaWO2trT7rm3lgjlIOOhG0xfBK-D8XjP7PvFEYu5vJBTotcqlDKFH21ORAwpYgXBoeEjtakDndPPYzGpqC36FBiYKuT5q9kwyzec7ksbzXfMJ7GsX1cmy4c88rfcZpXj4EWeK1gQIdF6o3oexQs7jWPSh46JQdDJq4FQsWDRqp8qQGa2BWcjkW0auq7NgzFPfpXSTvD2f6YSr_DG-8lvLXlev6v9fEzDmgNm6-WQBEGgVrDh3YZtQKB9qKAgvZsj6309qsObDqby_vvtLX9ZIjogG7tesOaodkA4m16OXajXFtFW9uPdXzX6LdKEBluzJNGTxTNdaYGZ_PsYx8_0nvjr4djYGySg3L8rYQ1xTfeCaHQRlqr1KmuHe0duRDq00tMKWuSTaC0pV_3BwOr_uTF_u_CRuK5t14_Gku2aPNipVpV53h8yRl1UaXGC6Fa2nkxn-ydu66NonXGcz_WPTogO2wF9dsR9Mk0EEKq4ogK7Ffa58vIk37QBl6LaOh0TDfUjcPQNdI67RNlA=w687-h651-s-no-gm?authuser=0"
+          alt=""
+          className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+        />
       </section>
     </div>
   );
