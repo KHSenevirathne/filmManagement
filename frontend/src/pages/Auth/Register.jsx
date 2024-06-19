@@ -5,6 +5,7 @@ import Loader from "../../components/Loader";
 import { useRegisterMutation } from "../../redux/api/usersApiSlice";
 import { setCredentials } from "../../redux/features/auth/authSlice";
 import { toast } from "react-toastify";
+import aImage from "../../../../uploads/Wlcm2.webp";
 
 const Register = () => {
     const [username, setName] = useState("");
@@ -145,9 +146,9 @@ const Register = () => {
                 </div>
             </div>
             <img
-                src="https://lh3.googleusercontent.com/pw/AP1GczOovxU4lKZn0Hc0tskDEpmCGcGUve441iwn4wiC84DF5cd08-vghDEbLg_6ll_UkWCzy2N5frV5O_3GLZmF5JQfZLspDxeLhLmeHqmiqkdMvOknm9KVcSLqe3fPn1vfgKxnEL9iYBeLP0ena7i2pQwb212lOCDEY7W-P5RLj2bd0hQFu0SWJMMzy-b3Uqgb1eH5lWhFCsoj6RPgN5hKzxh-v4LlEt6h6hnrp1mZXFFXOVls8TCIyccFWys-k6M26Qt6PbWK-f-sGmh-e3oKAN9aHkU450afA00ITlN4JZXOx1zSqxE-L4R_HTZGuS0v3ytH7lBB5lDCsBHrvnQ0zd8ImMxyJcDaecCBgOIEMHi2gI8DDn1dy3qdipF_OjWrB6KQ75xYO-zhHQT0WIuwFUFX6SIW_5sAsP2_RSjbZxknlU_KPqooEkx4mg3rwogxTDrLkU7APiWiTD_CTN1TzEHFPkjAiz2WJtapODLI4hX1y3IUJVvfWyHYtj4O0V0igSL_15x13ghOvyvu2N7pCb6mrtYdYUXdr0KpO2J7KLXY6NKFxD_kJCVkyRBjwc-d4oizKQZxy6UDliSg5Z_V0O0_3Bo7keHHZkLk8x1z6wnRcHtPbEkR-lIrZoGouEl4XuAa1_cIH9eu2TkdYmYFdHr1BNdMLUYjckWk43NzJork6dGsSf3zCf68y4gUHwi5NNujyU8Kg7NjjN2cGbmtKwJQEOS2shBAGxAzy6mNSTZvOFBfOzmv8UsvYS3WmCX-TwkgLlVgIv1VKJR0eyBLtACLU5ebEcRU6ZfaHtpZEwd2L1D2_OI3pFaRKebY4YyAzp1QcVFDmoh5HCfNp2dTvOrZ4tuWycRld5YRrDvSg3WBD1wFRv6kt4Sm2Rme0dAK4HWqsS_lqopG_Tnnt799rctnO0M=w687-h651-s-no-gm?authuser=0"
+                src={aImage}
                 alt=""
-                className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+                className="h-[49rem] w-[53%] xl:block md:hidden sm:hidden rounded-lg"
             />
         </section>
     );

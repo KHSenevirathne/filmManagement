@@ -5,6 +5,7 @@ import Loader from "../../components/Loader";
 import { useLoginMutation } from "../../redux/api/usersApiSlice";
 import { setCredentials } from "../../redux/features/auth/authSlice";
 import { toast } from "react-toastify";
+import aImage from '../../../../uploads/Wlcmbk.webp';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -104,9 +105,9 @@ const Login = () => {
           </div>
         </div>
         <img
-          src="https://lh3.googleusercontent.com/pw/AP1GczNm7yr58K050BSVhgfkw4DF_k4VXnDfI_35K7Oz43SYoiEpjMQt_GrJ9sPhCuQk_fXWex8DJNDv0wg9f8Yy0AxCmdL7sHYOLiBIVZ6Vtp3X5eGviPyK8zF7kUgLuB9clFSjr3zf7Fe9rj7LwkpwnfTW-z72pqEOJMSuOD9DxEU0M1hybhTQHWGI9ds6xNxhfXd5rw0FzD02MOtLGjJczCYCR7_m5D_Ig8xMKbz9QlVJsJqpnUJCDpAXmz3VkBoosGTIJk9-srj1XkwOWXJ4GzyAxKju7_8QI_rWtiDQN_Ma1IXscQVhPTHOezT1JKyKalPTXLhb0OmZJJbmd9Hh2dXaA07cETezbMg1oO4JBtPnA9ecM-4tC3mAxB6xCyTZnQMq7kB1yhpORuftRF6f8fPM-lz4hMMSKQQNRGn4mGVgRp2EdhSRM8xjLVU17QmSWTCqmqAKsdGhWKZUSz7diMUoWoCk5h0T62_Y26NALjHoQDlyViCKSzMzx0YUgJeul124mA_quRskieSlyfRy8jD9-OJ3EosOhqYCGKNsJQTDTCe05FqTvgKQTxfXQlSz6-ZUPQu0rm1iR__l52pYYdRrZx3LLIAAGyAh8abTpJ2AReZxeGrcEEJHuyB0kc51nByZ2cOggtuiEYrXFf-UD7BN1-_25HiuVdbgMLbe8Yo7GuQbkyiy6fqSv6rHEqIl_fcS7Bh7CvjTgMD0lccNeivIWxa7FPLnPyQnSzTCCbYak_Ljw-3c4LZLRgv3kEVvTlnCxR-_kaKGgaf35Shj_n3tJ92lGuSWStx8Lv3YSUp8iioINgiBVBzi4g862pgrI8xye8TH_icPyJrj4R6d38vNIUdE1-j4Hx3sBsP2zNJCETmk4lL6nRxvUOdWlj80H_uYR4h38YsRyKjM0n15QRtpXOw=w687-h651-s-no-gm?authuser=0"
+          src={aImage}
           alt=""
-          className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+          className="h-[49rem] w-[53%] xl:block md:hidden sm:hidden rounded-lg"
         />
       </section>
     </div>
