@@ -17,6 +17,7 @@ import Profile from "./pages/User/Profile";
 import AdminRoute from "./pages/Admin/AdminRoute";
 import UserList from "./pages/Admin/UserList";
 import CategoryList from "./pages/Admin/CategoryList";
+import ProductList from "./pages/Admin/ProductList";
 
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path="/" element={<App />}>
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
     <Route path="/admin" element={<AdminRoute />}>
       <Route path="userlist" element={<UserList />} />
       <Route path="categorylist" element={<CategoryList />} />
+      <Route path="productlist" element={<ProductList />} />
     </Route>
 
   </Route>)
