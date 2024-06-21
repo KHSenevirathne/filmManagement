@@ -25,7 +25,7 @@ const AdminProductUpdate = () => {
   const [category, setCategory] = useState(productData?.category || "");
   const [quantity, setQuantity] = useState(productData?.quantity || "");
   const [genre, setGenre] = useState(productData?.genre || "");
-  const [stock, setStock] = useState(productData?.countInStock);
+  const [stock, setStock] = useState(productData?.countInStock || "");
 
   // hook
   const navigate = useNavigate();
@@ -59,13 +59,13 @@ const AdminProductUpdate = () => {
     try {
       const res = await uploadProductImage(formData).unwrap();
       toast.success("Item added successfully", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
         autoClose: 2000,
       });
       setImage(res.image);
     } catch (err) {
       toast.success("Item added successfully", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
         autoClose: 2000,
       });
     }
@@ -89,12 +89,12 @@ const AdminProductUpdate = () => {
 
       if (data?.error) {
         toast.error(data.error, {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 2000,
         });
       } else {
         toast.success(`Product successfully updated`, {
-          position: toast.POSITION.TOP_RIGHT,
+          position: "top-right",
           autoClose: 2000,
         });
         navigate("/admin/allproductslist");
@@ -102,7 +102,7 @@ const AdminProductUpdate = () => {
     } catch (err) {
       console.log(err);
       toast.error("Product update failed. Try again.", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
         autoClose: 2000,
       });
     }
@@ -117,14 +117,14 @@ const AdminProductUpdate = () => {
 
       const { data } = await deleteProduct(params._id);
       toast.success(`"${data.name}" is deleted`, {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
         autoClose: 2000,
       });
       navigate("/admin/allproductslist");
     } catch (err) {
       console.log(err);
       toast.error("Delete failed. Try again.", {
-        position: toast.POSITION.TOP_RIGHT,
+        position: "top-right",
         autoClose: 2000,
       });
     }
@@ -135,14 +135,14 @@ const AdminProductUpdate = () => {
       <div className="container  xl:mx-[9rem] sm:mx-[0]">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-3/4 p-3">
-            <div className="h-12">Update / Delete Product</div>
+            <div className="h-12 text-2xl font-bold">Update / Delete Product</div>
 
             {image && (
               <div className="text-center">
                 <img
                   src={image}
                   alt="product"
-                  className="block mx-auto w-full h-[40%]"
+                  className="block mx-auto w-full max-w-lg h-auto max-h-[40%]"
                 />
               </div>
             )}
