@@ -164,7 +164,7 @@ const AdminProductUpdate = () => {
             </div>
 
             <div className="p-3">
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap font-semibold">
                 <div className="one">
                   <label htmlFor="name">Name</label> <br />
                   <input
@@ -186,7 +186,7 @@ const AdminProductUpdate = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap font-semibold">
                 <div>
                   <label htmlFor="name block">Quantity</label> <br />
                   <input
@@ -208,7 +208,7 @@ const AdminProductUpdate = () => {
                 </div>
               </div>
 
-              <label htmlFor="" className="my-5">
+              <label htmlFor="" className="my-5 font-semibold">
                 Description
               </label>
               <textarea
@@ -218,7 +218,7 @@ const AdminProductUpdate = () => {
                 onChange={(e) => setDescription(e.target.value)}
               />
 
-              <div className="flex justify-between">
+              <div className="flex justify-between font-semibold">
                 <div>
                   <label htmlFor="name block">Count In Stock</label> <br />
                   <input
@@ -248,13 +248,13 @@ const AdminProductUpdate = () => {
               <div className="">
                 <button
                   onClick={handleSubmit}
-                  className="py-4 px-10 mt-5 rounded-lg text-lg font-bold  bg-green-600 mr-6"
+                  className="py-4 px-10 mt-5 rounded-lg text-lg font-bold  bg-green-600 mr-6 text-white transform transition-transform duration-300 hover:bg-green-700 hover:scale-105"
                 >
                   Update
                 </button>
                 <button
                   onClick={handleDelete}
-                  className="py-4 px-10 mt-5 rounded-lg text-lg font-bold  bg-pink-600"
+                  className="py-4 px-10 mt-5 rounded-lg text-lg font-bold  bg-red-600 text-white transform transition-transform duration-300 hover:bg-red-700 hover:scale-105"
                 >
                   Delete
                 </button>

@@ -91,7 +91,7 @@ const ProductList = () => {
           )}
 
           <div className="mb-3">
-            <label className="border border-pink-500 text-gray-500 px-4 block w-full text-center rounded-lg cursor-pointer font-bold py-11 text-2xl">
+            <label className="border border-pink-500 text-gray-500 px-4 block w-full text-center rounded-lg cursor-pointer font-bold py-11 text-2xl transform transition-transform duration-300 hover:bg-gray-400 hover:scale-105 hover:text-white">
               {image ? image.name : "Upload Image"}
 
               <input
@@ -185,7 +185,7 @@ const ProductList = () => {
 
             <button
               onClick={handleSubmit}
-              className="py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-pink-600 text-white"
+              className="py-4 px-10 mt-5 rounded-lg text-lg font-bold bg-pink-600 text-white transform transition-transform duration-300 hover:bg-pink-700 hover:scale-105"
             >
               Submit
             </button>
