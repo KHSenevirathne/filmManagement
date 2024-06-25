@@ -47,7 +47,7 @@ const AdminProductUpdate = () => {
       setName(productData.name);
       setDescription(productData.description);
       setPrice(productData.price);
-      setCategory(productData.category?._id);
+      setCategory(productData.category);
       setQuantity(productData.quantity);
       setGenre(productData.genre);
       setImage(productData.image);
@@ -234,6 +234,7 @@ const AdminProductUpdate = () => {
                   <select
                     placeholder="Choose Category"
                     className="p-4 mb-3 w-[30rem] border rounded-lg bg-[#101011] text-white mr-[5rem] transform transition-transform duration-300 hover:bg-gray-600"
+                    value={category}
                     onChange={(e) => setCategory(e.target.value)}
                   >
                     {categories?.map((c) => (
