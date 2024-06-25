@@ -105,7 +105,7 @@ const ProductList = () => {
           </div>
 
           <div className="p-3">
-            <div className="flex flex-wrap font-semibold">
+            <div className="flex justify-between font-semibold">
               <div className="one">
                 <label htmlFor="name">Name</label> <br />
                 <input
@@ -125,7 +125,7 @@ const ProductList = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap font-semibold">
+            <div className="flex justify-between font-semibold">
               <div className="one">
                 <label htmlFor="name block">Quantity</label> <br />
                 <input
@@ -151,7 +151,7 @@ const ProductList = () => {
             </label>
             <textarea
               type="text"
-              className="p-2 mb-3 bg-[#101011] border rounded-lg w-[95%] text-white font-semibold transform transition-transform duration-300 hover:bg-gray-600"
+              className="p-2 mb-3 bg-[#101011] border rounded-lg w-[100%] text-white font-semibold transform transition-transform duration-300 hover:bg-gray-600"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
