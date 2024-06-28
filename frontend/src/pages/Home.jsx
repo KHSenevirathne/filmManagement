@@ -21,13 +21,13 @@ const Home = () => {
       ) : (
         <>
           <div className="flex justify-between items-center">
-            <h1 className="ml-[20rem] mt-[10rem] text-[3rem]">
-              Special Products
+            <h1 className="ml-[9rem] mt-[10rem] text-[3rem]">
+              Most Popular 🔥
             </h1>
 
             <Link
               to="/shop"
-              className="bg-pink-600 font-bold rounded-full py-2 px-10 mr-[18rem] mt-[10rem]"
+              className="bg-pink-600 font-bold text-white rounded-full py-2 px-10 mr-[8rem] mt-[10rem] transform transition-transform duration-300 hover:bg-pink-700 hover:scale-105"
             >
               Shop
             </Link>
@@ -36,7 +36,7 @@ const Home = () => {
           <div>
             <div className="flex justify-center flex-wrap mt-[2rem]">
               {data.products.map((product) => (
-                <div key={product._id}>
+                <div key={product._id} className="w-[30%] p-4">
                   <Product product={product} />
                 </div>
               ))}

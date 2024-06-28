@@ -55,13 +55,13 @@ const ProductCarousel = () => {
                 <img
                   src={image}
                   alt={name}
-                  className="w-full rounded-lg object-cover h-[30rem]"
+                  className="w-half rounded-lg object-cover h-[30rem]"
                 />
 
                 <div className="mt-4 flex justify-between">
                   <div className="one">
-                    <h2>{name}</h2>
-                    <p> $ {price}</p> <br /> <br />
+                    <h2 className="font-semibold">{name}</h2>
+                    <p className="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300"> Rs. {price} Per Product</p> <br /> <br />
                     <p className="w-[25rem]">
                       {description.substring(0, 170)} ...
                     </p>
@@ -70,30 +70,31 @@ const ProductCarousel = () => {
                   <div className="flex justify-between w-[20rem]">
                     <div className="one">
                       <h1 className="flex items-center mb-6">
-                        <FaStore className="mr-2 text-white" /> Genre: {genre}
+                        <FaStore className="mr-2 text-[#831843]" /> Genre:
+                        <div className="font-semibold ml-1">{genre}</div>
                       </h1>
                       <h1 className="flex items-center mb-6">
-                        <FaClock className="mr-2 text-white" /> Added:{" "}
-                        {moment(createdAt).fromNow()}
+                        <FaClock className="mr-2 text-[#831843]" /> Added:{" "}
+                        <div className="font-semibold ml-1">{moment(createdAt).fromNow()}</div>
                       </h1>
                       <h1 className="flex items-center mb-6">
-                        <FaStar className="mr-2 text-white" /> Reviews:
-                        {numReviews}
+                        <FaStar className="mr-2 text-[#831843]" /> Reviews:
+                        <div className="font-semibold ml-1">{numReviews}</div>
                       </h1>
                     </div>
 
                     <div className="two">
                       <h1 className="flex items-center mb-6">
-                        <FaStar className="mr-2 text-white" /> Ratings:{" "}
-                        {Math.round(rating)}
+                        <FaStar className="mr-2 text-[#831843]" /> Ratings:{" "}
+                        <div className="font-semibold ml-1">{Math.round(rating)}</div>
                       </h1>
                       <h1 className="flex items-center mb-6">
-                        <FaShoppingCart className="mr-2 text-white" /> Quantity:{" "}
-                        {quantity}
+                        <FaShoppingCart className="mr-2 text-[#831843]" /> Quantity:{" "}
+                        <div className="font-semibold ml-1">{quantity}</div>
                       </h1>
                       <h1 className="flex items-center mb-6">
-                        <FaBox className="mr-2 text-white" /> In Stock:{" "}
-                        {countInStock}
+                        <FaBox className="mr-2 text-[#831843]" /> In Stock:{" "}
+                        <div className="font-semibold ml-1">{countInStock}</div>
                       </h1>
                     </div>
                   </div>

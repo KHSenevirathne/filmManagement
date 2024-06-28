@@ -14,6 +14,7 @@ import {
   FaShoppingCart,
   FaStar,
   FaStore,
+  FaArrowLeft,
 } from "react-icons/fa";
 import moment from "moment";
 import HeartIcon from "./HeartIcon";
@@ -68,7 +69,7 @@ const ProductDetails = () => {
       <div>
         <Link
           to="/"
-          className="text-white font-semibold hover:underline ml-[10rem]"
+          className="font-semibold ml-[10rem] hover:text-blue-500"
         >
           Go Back
         </Link>
@@ -82,52 +83,53 @@ const ProductDetails = () => {
         </Message>
       ) : (
         <>
-          <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem]">
+          <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem] mr-[10rem]">
             <div>
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full xl:w-[50rem] lg:w-[45rem] md:w-[30rem] sm:w-[20rem] mr-[2rem]"
+                className="w-full xl:w-[30rem] lg:w-[25rem] md:w-[10rem] sm:w-[10rem] mr-[2rem]"
               />
 
               <HeartIcon product={product} />
             </div>
 
             <div className="flex flex-col justify-between">
-              <h2 className="text-2xl font-semibold">{product.name}</h2>
-              <p className="my-4 xl:w-[35rem] lg:w-[35rem] md:w-[30rem] text-[#B0B0B0]">
+              <h2 className="text-3xl font-semibold">{product.name}</h2>
+              <p className="my-4 xl:w-[45rem] lg:w-[35rem] md:w-[30rem] text-gray-700 text-xl">
                 {product.description}
               </p>
 
-              <p className="text-5xl my-4 font-extrabold">$ {product.price}</p>
+              <p className="text-5xl my-4 font-extrabold text-[#831843]">Rs.{product.price}.00</p>
 
               <div className="flex items-center justify-between w-[20rem]">
                 <div className="one">
                   <h1 className="flex items-center mb-6">
-                    <FaStore className="mr-2 text-white" /> Genre:{" "}
-                    {product.genre}
+                    <FaStore className="mr-2 text-[#831843]" /> Genre :{" "}
+                    <div className="font-semibold ml-1">{product.genre}</div>
                   </h1>
                   <h1 className="flex items-center mb-6 w-[20rem]">
-                    <FaClock className="mr-2 text-white" /> Added:{" "}
-                    {moment(product.createAt).fromNow()}
+                    <FaClock className="mr-2 text-[#831843]" /> Added :{" "}
+                    <div className="font-semibold ml-1">{moment(product.createdAt).fromNow()}</div>
                   </h1>
                   <h1 className="flex items-center mb-6">
-                    <FaStar className="mr-2 text-white" /> Reviews:{" "}
-                    {product.numReviews}
+                    <FaStar className="mr-2 text-[#831843]" /> Reviews:{" "}
+                    <div className="font-semibold ml-1">{product.numReviews}</div>
                   </h1>
                 </div>
 
                 <div className="two">
                   <h1 className="flex items-center mb-6">
-                    <FaStar className="mr-2 text-white" /> Ratings: {rating}
+                    <FaStar className="mr-2 text-[#831843]" /> Ratings : 
+                    <div className="font-semibold ml-1">{rating}</div>
                   </h1>
                   <h1 className="flex items-center mb-6">
-                    <FaShoppingCart className="mr-2 text-white" /> Quantity:{" "}
-                    {product.quantity}
+                    <FaShoppingCart className="mr-2 text-[#831843]" /> Quantity:{" "}
+                    <div className="font-semibold ml-1">{product.quantity}</div>
                   </h1>
                   <h1 className="flex items-center mb-6 w-[10rem]">
-                    <FaBox className="mr-2 text-white" /> In Stock:{" "}
-                    {product.countInStock}
+                    <FaBox className="mr-2 text-[#831843]" /> In Stock :{" "}
+                    <div className="font-semibold ml-1">{product.countInStock}</div>
                   </h1>
                 </div>
               </div>
@@ -159,7 +161,7 @@ const ProductDetails = () => {
                 <button
                 //   onClick={addToCartHandler}
                   disabled={product.countInStock === 0}
-                  className="bg-pink-600 text-white py-2 px-4 rounded-lg mt-4 md:mt-0"
+                  className="bg-pink-600 text-white py-2 px-4 rounded-lg mt-4 md:mt-0 transform transition-transform duration-300 hover:bg-pink-700 hover:scale-105"
                 >
                   Add To Cart
                 </button>
