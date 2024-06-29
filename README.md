@@ -35,3 +35,7 @@ npm i slick-carousel react-slick react-toastify react-router react-router-dom re
 ### Cart
 
 ![cart](assets/Cart.png)
+
+### Product
+
+![product](assets/Product.png)
