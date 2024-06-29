@@ -219,7 +219,7 @@ const Order = () => {
           <div>
             <button
               type="button"
-              className="bg-pink-500 text-white w-full py-2"
+              className="bg-pink-600 text-white w-full py-2 font-bold text-white transform transition-transform duration-300 hover:bg-pink-700 hover:scale-105 rounded-3xl"
               onClick={deliverHandler}
             >
               Mark As Delivered
