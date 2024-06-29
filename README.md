@@ -32,10 +32,11 @@ npm i slick-carousel react-slick react-toastify react-router react-router-dom re
 
 ![favourite](assets/Fav.png)
 
+### Product
+
+![product](assets/Product.png)
+
 ### Cart
 
 ![cart](assets/Cart.png)
 
-### Product
-
-![product](assets/Product.png)
