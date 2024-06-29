@@ -85,7 +85,7 @@ const Shop = () => {
       <div className="container mx-auto">
         <div className="flex md:flex-row">
           <div className="bg-[#151515] p-3 mt-2 mb-2">
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2 text-white font-semibold">
               Filter by Categories
             </h2>
 
@@ -111,7 +111,7 @@ const Shop = () => {
               ))}
             </div>
 
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2 text-white font-semibold">
               Filter by Genres
             </h2>
 
@@ -136,7 +136,7 @@ const Shop = () => {
               ))}
             </div>
 
-            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2">
+            <h2 className="h4 text-center py-2 bg-black rounded-full mb-2 text-white font-semibold">
               Filer by Price
             </h2>
 
@@ -152,16 +152,16 @@ const Shop = () => {
 
             <div className="p-5 pt-0">
               <button
-                className="w-full border my-4"
+                className="w-full border border-red-500 my-4 bg-red-700 rounded-full py-2 px-4 text-white font-bold transform transition-transform duration-300 hover:bg-green-500 hover:border-green-700 hover:scale-105"
                 onClick={() => window.location.reload()}
               >
-                Reset
+                R e s e t
               </button>
             </div>
           </div>
 
           <div className="p-3">
-            <h2 className="h4 text-center mb-2">{products?.length} Products</h2>
+            <h2 className="h4 text-center mb-2 font-semibold text-lg">~{products?.length} Products~</h2>
             <div className="flex flex-wrap">
               {products.length === 0 ? (
                 <Loader />
