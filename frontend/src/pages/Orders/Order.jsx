@@ -35,6 +35,8 @@ const Order = () => {
     error: errorPayPal,
   } = useGetPaypalClientIdQuery();
 
+  const exchangeRate = 400;
+
   useEffect(() => {
     if (!errorPayPal && !loadingPaPal && paypal.clientId) {
       const loadingPaPalScript = async () => {
@@ -69,9 +71,11 @@ const Order = () => {
   }
 
   function createOrder(data, actions) {
+    const totalPriceInUSD = (order.totalPrice / exchangeRate).toFixed(2);
+  
     return actions.order
       .create({
-        purchase_units: [{ amount: { value: order.totalPrice } }],
+        purchase_units: [{ amount: { value: totalPriceInUSD } }],
       })
       .then((orderID) => {
         return orderID;
@@ -94,19 +98,19 @@ const Order = () => {
   ) : (
     <div className="container flex flex-col ml-[10rem] md:flex-row">
       <div className="md:w-2/3 pr-4">
-        <div className="border gray-300 mt-5 pb-4 mb-5">
+        <div className="border border-black gray-300 mt-5 pb-4 mb-5">
           {order.orderItems.length === 0 ? (
             <Messsage>Order is empty</Messsage>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-[80%]">
-                <thead className="border-b-2">
+                <thead className="border-b-2 border-black">
                   <tr>
-                    <th className="p-2">Image</th>
-                    <th className="p-2">Product</th>
-                    <th className="p-2 text-center">Quantity</th>
-                    <th className="p-2">Unit Price</th>
-                    <th className="p-2">Total</th>
+                    <th className="p-2 font-bold text-xl text-[#831843]">Image</th>
+                    <th className="p-2 font-bold text-xl text-[#831843]">Product</th>
+                    <th className="p-2 text-center font-bold text-xl text-[#831843]">Quantity</th>
+                    <th className="p-2 font-bold text-xl text-[#831843]">Unit Price</th>
+                    <th className="p-2 font-bold text-xl text-[#831843]">Total</th>
                   </tr>
                 </thead>
 
@@ -117,18 +121,18 @@ const Order = () => {
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-16 h-16 object-cover"
+                          className="w-16 object-cover"
                         />
                       </td>
 
-                      <td className="p-2">
+                      <td className="p-2 font-bold">
                         <Link to={`/product/${item.product}`}>{item.name}</Link>
                       </td>
 
-                      <td className="p-2 text-center">{item.qty}</td>
-                      <td className="p-2 text-center">{item.price}</td>
-                      <td className="p-2 text-center">
-                        $ {(item.qty * item.price).toFixed(2)}
+                      <td className="p-2 text-center font-bold">{item.qty}</td>
+                      <td className="p-2 text-center font-bold">{item.price}</td>
+                      <td className="p-2 text-center font-bold">
+                        Rs. {(item.qty * item.price).toFixed(2)}
                       </td>
                     </tr>
                   ))}
@@ -141,7 +145,7 @@ const Order = () => {
 
       <div className="md:w-1/3">
         <div className="mt-5 border-gray-300 pb-4 mb-4">
-          <h2 className="text-xl font-bold mb-2">Shipping</h2>
+          <h2 className="text-xl font-bold mb-2 text-[#831843]">Shipping</h2>
           <p className="mb-4 mt-4">
             <strong className="text-pink-500">Order:</strong> {order._id}
           </p>
@@ -173,22 +177,22 @@ const Order = () => {
           )}
         </div>
 
-        <h2 className="text-xl font-bold mb-2 mt-[3rem]">Order Summary</h2>
-        <div className="flex justify-between mb-2">
+        <h2 className="text-xl font-bold mb-2 mt-[3rem] text-[#831843]">Order Summary</h2>
+        <div className="flex justify-between mb-2 font-bold">
           <span>Items</span>
-          <span>$ {order.itemsPrice}</span>
+          <span>Rs. {order.itemsPrice}</span>
         </div>
-        <div className="flex justify-between mb-2">
+        <div className="flex justify-between mb-2 font-bold">
           <span>Shipping</span>
-          <span>$ {order.shippingPrice}</span>
+          <span>Rs. {order.shippingPrice}</span>
         </div>
-        <div className="flex justify-between mb-2">
+        <div className="flex justify-between mb-2 font-bold">
           <span>Tax</span>
-          <span>$ {order.taxPrice}</span>
+          <span>Rs. {order.taxPrice}</span>
         </div>
-        <div className="flex justify-between mb-2">
+        <div className="flex justify-between mb-2 font-bold">
           <span>Total</span>
-          <span>$ {order.totalPrice}</span>
+          <span>Rs. {order.totalPrice}</span>
         </div>
 
         {!order.isPaid && (
