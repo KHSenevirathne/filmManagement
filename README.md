@@ -1,4 +1,4 @@
-## Module Installed
+# Module Installed
 
 ### BACKEND(in project location)
 
@@ -9,3 +9,29 @@ npm i nodemon multer mongoose jsonwebtoken express-formidable express-async-hand
 
 npm i slick-carousel react-slick react-toastify react-router react-router-dom react-redux react-icons
  apexcharts react-apexcharts moment flowbite axios @reduxjs/toolkit @paypal/react-paypal-js
+
+# View
+
+### Register Page
+
+![register](assets/RegisterPage.png)
+
+### Home
+
+![home](assets/Home.png)
+
+### Trending
+
+![trending](assets/Trending.png)
+
+### Shop
+
+![shop](assets/Shop.png)
+
+### Favourite
+
+![favourite](assets/Fav.png)
+
+### Cart
+
+![cart](assets/Cart.png)
