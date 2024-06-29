@@ -15,3 +15,23 @@ npm i slick-carousel react-slick react-toastify react-router react-router-dom re
 ### Register Page
 
 ![register](assets/RegisterPage.png)
+
+### Home
+
+![home](assets/Home.png)
+
+### Trending
+
+![trending](assets/Trending.png)
+
+### Shop
+
+![shop](assets/Shop.png)
+
+### Favourite
+
+![favourite](assets/Fav.png)
+
+### Cart
+
+![cart](assets/Cart.png)
