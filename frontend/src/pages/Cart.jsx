@@ -26,32 +26,32 @@ const Cart = () => {
     <>
       <div className="container flex justify-around items-start flex wrap mx-auto mt-8">
         {cartItems.length === 0 ? (
-          <div>
-            Your cart is empty <Link to="/shop">Go To Shop</Link>
+          <div className="text-xl font-bold">
+            Your cart is empty <Link to="/shop" className="text-[#831843] hover:text-blue-500 underline">Go To Shop</Link>
           </div>
         ) : (
           <>
             <div className="flex flex-col w-[80%]">
-              <h1 className="text-2xl font-semibold mb-4">Shopping Cart</h1>
+              <h1 className="text-2xl font-bold mb-4">🛒 SHOPPING CART</h1>
 
               {cartItems.map((item) => (
-                <div key={item._id} className="flex items-enter mb-[1rem] pb-2">
+                <div key={item._id} className="flex items-enter mb-[3rem] pb-2">
                   <div className="w-[5rem] h-[5rem]">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover rounded"
+                      className="object-cover rounded"
                     />
                   </div>
 
                   <div className="flex-1 ml-4">
-                    <Link to={`/product/${item._id}`} className="text-pink-500">
+                    <Link to={`/product/${item._id}`} className="text-[#831843] font-semibold text-xl">
                       {item.name}
                     </Link>
 
-                    <div className="mt-2 text-white">{item.brand}</div>
-                    <div className="mt-2 text-white font-bold">
-                      $ {item.price}
+                    <div className="mt-2">{item.genre}</div>
+                    <div className="mt-2 text-red-600 font-bold">
+                      Rs: {item.price}.00
                     </div>
                   </div>
 
@@ -84,19 +84,19 @@ const Cart = () => {
 
               <div className="mt-8 w-[40rem]">
                 <div className="p-4 rounded-lg">
-                  <h2 className="text-xl font-semibold mb-2">
+                  <h2 className="text-xl font-semibold mb-2 text-[#831843]">
                     Items ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                   </h2>
 
-                  <div className="text-2xl font-bold">
-                    ${" "}
+                  <div className="text-2xl font-bold text-red-700">
+                    Rs. {" "}
                     {cartItems
                       .reduce((acc, item) => acc + item.qty * item.price, 0)
                       .toFixed(2)}
                   </div>
 
                   <button
-                    className="bg-pink-500 mt-4 py-2 px-4 rounded-full text-lg w-full"
+                    className="bg-pink-500 mt-4 py-2 px-4 rounded-full text-lg w-full text-white font-semibold transform transition-transform duration-300 hover:bg-pink-700 hover:scale-105"
                     disabled={cartItems.length === 0}
                     onClick={checkoutHandler}
                   >
