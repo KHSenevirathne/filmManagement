@@ -201,6 +201,16 @@ const markOrderAsDelivered = async (req, res) => {
   }
 };
 
+const deleteOrder = async (req, res) => {
+  try {
+    const removed = await Order.findByIdAndDelete(req.params.id);
+    res.json(removed);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
 export {
   createOrder,
   getAllOrders,
@@ -211,4 +221,5 @@ export {
   findOrderById,
   markOrderAsPaid,
   markOrderAsDelivered,
+  deleteOrder,
 };

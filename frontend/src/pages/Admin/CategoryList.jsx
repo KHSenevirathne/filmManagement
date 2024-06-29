@@ -98,7 +98,7 @@ const CategoryList = () => {
       }
     } catch (error) {
       console.error(error);
-      toast.error("Category delection failed. Tray again.");
+      toast.error("Category delection failed. Try again.");
     }
   };
 
