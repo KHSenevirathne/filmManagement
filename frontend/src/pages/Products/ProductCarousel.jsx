@@ -86,7 +86,7 @@ const ProductCarousel = () => {
                     <div className="two">
                       <h1 className="flex items-center mb-6">
                         <FaStar className="mr-2 text-[#831843]" /> Ratings:{" "}
-                        <div className="font-semibold ml-1">{Math.round(rating)}</div>
+                        <div className="font-semibold ml-1">{Math.round(rating)} / 5</div>
                       </h1>
                       <h1 className="flex items-center mb-6">
                         <FaShoppingCart className="mr-2 text-[#831843]" /> Quantity:{" "}

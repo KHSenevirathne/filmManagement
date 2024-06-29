@@ -20,7 +20,7 @@ const SmallProduct = ({ product }) => {
       <div className="p-4">
         <Link to={`/product/${product._id}`} className="hover:text-blue-500">
           <h2 className="flex justify-between items-center font-semibold">
-            <div className="hover:underline">{product.name}</div>
+            <div>{product.name}</div>
             <span className="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300">
               Rs.{product.price}
             </span>
