@@ -27,7 +27,7 @@ const ProductCard = ({ p }) => {
             className="cursor-pointer w-full"
             src={p.image}
             alt={p.name}
-            style={{ height: "170px", objectFit: "cover" }}
+            style={{ objectFit: "cover" }}
           />
         </Link>
         <HeartIcon product={p} />
@@ -76,7 +76,7 @@ const ProductCard = ({ p }) => {
             className="p-2 rounded-full"
             onClick={() => addToCartHandler(p, 1)}
           >
-            <AiOutlineShoppingCart size={25} />
+            <AiOutlineShoppingCart size={25} color="white"/>
           </button>
         </section>
       </div>
