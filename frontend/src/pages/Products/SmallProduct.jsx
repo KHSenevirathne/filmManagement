@@ -5,11 +5,15 @@ const SmallProduct = ({ product }) => {
   return (
     <div className="w-[20rem] ml-[2rem] p-3">
       <div className="relative">
+        <div>
+        <Link to={`/product/${product._id}`}>
         <img
           src={product.image}
           alt={product.name}
           className="h-auto rounded"
         />
+        </Link>
+        </div>
         <HeartIcon product={product} />
       </div>
 

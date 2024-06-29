@@ -5,11 +5,15 @@ const Product = ({ product }) => {
   return (
     <div className="w-full p-3 relative">
       <div className="relative">
+        <div>
+        <Link to={`/product/${product._id}`}>
         <img
           src={product.image}
           alt={product.name}
           className="w-[30rem] rounded"
         />
+        </Link>
+        </div>
         <HeartIcon product={product} />
       </div>
 
