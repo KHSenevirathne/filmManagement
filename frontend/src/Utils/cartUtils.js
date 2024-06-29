@@ -9,7 +9,7 @@ export const addDecimals = (num) => {
     );
   
     // Calculate the shipping price
-    state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 10);
+    state.shippingPrice = addDecimals(Number((0.05 * state.itemsPrice).toFixed(2)));
   
     // Calculate the tax price
     state.taxPrice = addDecimals(Number((0.15 * state.itemsPrice).toFixed(2)));
