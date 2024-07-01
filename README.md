@@ -40,3 +40,31 @@ npm i slick-carousel react-slick react-toastify react-router react-router-dom re
 
 ![cart](assets/Cart.png)
 
+### Shipping
+
+![shipping](assets/Shipping.png)
+
+### Place Order
+
+![placeorder](assets/PlaceOrder.png)
+
+### Order Details
+
+![orderdetails](assets/OrderDetails.png)
+
+### Purches
+
+![purches](assets/Purches.png)
+
+### Manage Orders
+
+![manageorders](assets/ManageOrders.png)
+
+## Admin Privilages
+
+![AllProducts](assets/AllProducts.png)
+![AllOrders](assets/AllOrders.png)
+![AllUsers](assets/AllUsers.png)
+![ManageCategories](assets/ManageCategories.png)
+![CreateProducts](assets/CreateProducts.png)
+![Admin](assets/Admin.png)
